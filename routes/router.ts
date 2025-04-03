@@ -69,10 +69,12 @@ class Router {
             res.status(500).send({ error: "Internal Server Error" }); // Use Fastify methods
             return;
           }
+        } else {
+          res.status(404).send({ error: "Not Found" });
         }
       }
     }
-    res.status(404).send({ error: "Not Found" }); // Use Fastify methods
+    // Use Fastify methods
   }
 }
 
