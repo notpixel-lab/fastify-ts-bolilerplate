@@ -2,10 +2,10 @@
 
 export const setTestRoutes = (router: any) => {
   router.get("/news", (req, res) => {
-    message: ["news1", "news2"];
+    return { message: ["news1", "news2"] };
   });
   router.get("/news/:id", (req, res) => {
-    message: `news${req.params.id}`;
+    return { message: `news${req.params.id}` }; //not working
   });
   router.get("/hello", async (req, res) => {
     return { message: "Hello from custom Router and Fastify!" };
