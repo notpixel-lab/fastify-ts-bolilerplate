@@ -55,8 +55,17 @@ export class FastifyServer {
         return;
       }
       tgBot.start();
-      await this.fastify.listen({ port: 3001 });
-      console.log("Server is running on port 3001");
+
+      if (process.env.RENDER) {
+        console.log("Running on Render");
+        console.log("Environment:", process.env.RENDER_ENV); // Output: production, staging, etc.
+        await this.fastify.listen({ port: 3001, host: "0.0.0.0" }); // Listen on all interfaces});
+        console.log("Server is running on port 3001");
+      } else {
+        console.log("Not running on Render");
+        await this.fastify.listen({ port: 3001 }); // Listen on all interfaces});
+        console.log("Server is running on port 3001");
+      }
     } catch (err) {
       this.fastify.log.error(err);
       process.exit(1);

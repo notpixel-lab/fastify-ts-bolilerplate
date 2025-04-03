@@ -29,6 +29,7 @@
   "dependencies": {
     "@echristian/edge-tts": "^0.0.14",
     "@fastify/aws-lambda": "^5.1.4",
+    "@fastify/cors": "^11.0.1",
     "@google/genai": "^0.7.0",
     "@netlify/functions": "^3.0.4",
     "assemblyai": "^4.9.0",
