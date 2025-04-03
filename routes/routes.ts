@@ -12,5 +12,9 @@ router.get("/goodbye", async (req, res) => {
 });
 
 export const routesPlugin = async (fastify, opts) => {
+  fastify.addHook("preHandler", async (req, res) => {
+    //do something on api routes
+    if (res.sent) return; //stop on error (like user authentication)
+  });
   fastify.all("*", (req, reply) => router.handleRequest(req, reply));
 };
