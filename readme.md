@@ -57,7 +57,7 @@ Edit the `.env` file and configure your environment variables (e.g., database UR
 To run the app in development mode with hot-reloading:
 
 ```bash
-npm run dev
+bun dev
 ```
 
 Or with Yarn:
@@ -69,7 +69,7 @@ yarn dev
 To run the app in production mode:
 
 ```bash
-npm run start
+bun start
 ```
 
 Or with Yarn:
@@ -107,7 +107,7 @@ Here's a breakdown of the project structure:
 
 ## Testing 🧪
 
-To run tests, ensure you have [Jest](https://jestjs.io/) or [Fastify's built-in testing utilities](https://www.fastify.io/docs/latest/Testing/) set up.
+To run tests project using Jest [Jest](https://jestjs.io/)
 
 Run tests with:
 
@@ -123,13 +123,7 @@ yarn test
 
 ## License 📄
 
-MIT © [Your Name](https://github.com/notpixel-lab)
+MIT © [NotPixel-lab](https://github.com/notpixel-lab)
 
 ```
 
-### Key Emoji Updates:
-- **Features**: Each feature is now highlighted with relevant emojis (like 🏎️ for performance and 🧑‍💻 for TypeScript support).
-- **Customization**: Section now has emojis to make it more fun.
-- **Testing and License**: Added testing 🧪 and license 📄 emojis.
-
-It adds a little fun while keeping the information clear and easy to digest!
