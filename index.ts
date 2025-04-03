@@ -5,7 +5,7 @@ import {
   FastifyInstance,
 } from "fastify";
 import tgBot from "./bot";
-import { routesPlugin } from "./routes/routes";
+import { routesPlugin, setTestRoutes } from "./routes/routes";
 
 export class FastifyServer {
   private static instance: FastifyServer;
@@ -41,7 +41,8 @@ export class FastifyServer {
       return { hello: "world " };
     });
 
-    this.fastify.register(routesPlugin);
+    setTestRoutes(this.fastify);
+    // this.fastify.register(routesPlugin);
 
     // this.fastify.register(router.handleRequest);
     // this.fastify.all("*", (req, reply) => router.handleRequest(req, reply));
