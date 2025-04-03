@@ -10,3 +10,7 @@ router.get("/hello", async (req, res) => {
 router.get("/goodbye", async (req, res) => {
   return { message: "Goodbye from custom Router and Fastify!" };
 });
+
+export const routesPlugin = async (fastify, opts) => {
+  fastify.all("*", (req, reply) => router.handleRequest(req, reply));
+};
