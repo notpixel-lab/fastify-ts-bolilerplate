@@ -1,0 +1,40 @@
+{
+  "name": "fast-server-tg",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "bun --watch index.ts",
+    "test": "vitest"
+  },
+  "module": "module",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.1",
+    "@types/bun": "^1.2.8",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "^3.1.1",
+    "@vitest/eslint-plugin": "^1.1.39",
+    "jest": "^29.7.0",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "ts-jest": "^29.3.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "@echristian/edge-tts": "^0.0.14",
+    "@fastify/aws-lambda": "^5.1.4",
+    "@google/genai": "^0.7.0",
+    "@netlify/functions": "^3.0.4",
+    "assemblyai": "^4.9.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.2",
+    "grammy": "^1.35.1",
+    "grammy-edit-or-reply": "^1.2.0",
+    "serverless-http": "^3.2.0"
+  }
+}
